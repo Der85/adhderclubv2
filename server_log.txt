@@ -1,0 +1,38 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 22, 2024 - 23:00:06
+Django version 4.0.6, using settings 'smartnotes.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 157, in inner_run
+    handler = self.get_handler(*args, **options)
+  File "/usr/local/lib/python3.10/site-packages/django/contrib/staticfiles/management/commands/runserver.py", line 31, in get_handler
+    handler = super().get_handler(*args, **options)
+  File "/usr/local/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 78, in get_handler
+    return get_internal_wsgi_application()
+  File "/usr/local/lib/python3.10/site-packages/django/core/servers/basehttp.py", line 47, in get_internal_wsgi_application
+    return import_string(app_path)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    import_module(module_path)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/der85/django/smartnotes/wsgi.py", line 2, in <module>
+    if path not in sys.path:
+NameError: name 'sys' is not defined

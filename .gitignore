@@ -1,0 +1,35 @@
+# Python-related files
+*.pyc
+__pycache__/
+
+# Django-related files
+db.sqlite3
+.env
+media/
+staticfiles/
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# System files
+*.log
+.DS_Store
+node_modules
+.tmp
+Unpm-debug.log
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+db.sqlite3
+
+
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
