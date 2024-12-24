@@ -1,5 +1,4 @@
 from django.urls import path
-
 from . import views
 
 urlpatterns = [
@@ -8,4 +7,6 @@ urlpatterns = [
     path('notes/<int:pk>/edit', views.NotesUpdateView.as_view(), name="notes.update"),
     path('notes/<int:pk>/delete', views.NotesDeleteView.as_view(), name="notes.delete"),
     path('notes/new', views.NotesCreateView.as_view(), name="notes.new"),
+    # Add this new URL pattern
+    path('notes/<int:pk>/toggle-complete', views.NotesToggleCompleteView.as_view(), name="notes.toggle_complete"),
 ]

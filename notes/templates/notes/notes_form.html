@@ -1,17 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<form method='POST'>{% csrf_token %}
-    {{ form.as_p }}{{ form.tags }}
+<form method='POST'>
+    {% csrf_token %}
+ <h2>Title: </h2>   {{ form.title }}
+ <h2>Details: </h2>    {{ form.text }}
+ <h2>Due Date: </h2>   {{ form.due_date }}
+ <h2>Priotiry: </h2>   {{ form.priority }}
+    
+    <div class="form-group">
+        <label for="{{ form.tags.id_for_label }}">Tags (comma separated)</label>
+        {{ form.tags }}
+    </div>
 
     <button type="submit" class="btn btn-primary my-5">Submit</button>
     <a href="{% url 'notes.list'%}" class="btn btn-secondary">Cancel</a>
 </form>
+
 {% if form.errors %}
 <div class="alert alert-danger my-5">
-    {{form.errors.title.as_text}}
+    {{ form.errors }}
 </div>
 {% endif %}
-
 {% endblock %}
